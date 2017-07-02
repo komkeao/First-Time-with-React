@@ -10,16 +10,10 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native by Komkeao!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+        <View style={{width:50,height:50,backgroundColor:"red"}}/>
+        <View style={{width:50,height:50,backgroundColor:"yellow",alignSelf:"center"}}/>
+        <View style={{width:50,height:50,backgroundColor:"blue"}}/>
+        <View style={{width:50,height:50,backgroundColor:"green"}}/>
       </View>
     );
   }
@@ -27,19 +21,11 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+      flex:1,
+      flexDirection:"row",
+      justifyContent:"flex-start",//ในแกนหลัก (Flex Directions)
+      alignItems: "flex-start", //แกนรอง .. stretch ยืดเต็มแกนรอง
+      flexWrap: "wrap", //เกินจะขึ้นบรทัดใหม่
     backgroundColor: 'lightblue',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  }
 });
